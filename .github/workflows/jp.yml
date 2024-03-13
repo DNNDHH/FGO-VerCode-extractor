@@ -1,4 +1,4 @@
-name: 解析版本代码 - JP
+name: FGO版本码解析 - JP
 
 on:
   push:
@@ -24,7 +24,7 @@ jobs:
       - name: 安装运行库
         run: pip install -r https://raw.githubusercontent.com/DNNDHH/FGO-VerCode-extractor/JP/requirements.txt
 
-      - name: 获得库权限
+      - name: 获得库文件
         uses: actions/checkout@v2
 
       - name: 解析APK
