@@ -5,6 +5,8 @@ on:
     branches: [JP]
   pull_request:
     branches: [JP]
+  schedule:
+    - cron: "00 07 * * *"
   workflow_dispatch:
 
 jobs:
@@ -16,7 +18,7 @@ jobs:
 
     steps:
       - name: Install Requeriments
-        run: pip install -r https://raw.githubusercontent.com/O-Isaac/FGO-VerCode/JP/requirements.txt
+        run: pip install -r https://raw.githubusercontent.com/DNNDHH/FGO-VerCode-extractor/JP/requirements.txt
 
       - name: Gettings files from Repo
         uses: actions/checkout@v2
