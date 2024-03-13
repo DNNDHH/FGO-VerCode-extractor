@@ -1,4 +1,4 @@
-name: Extracting VerCode - JP
+name: 解析版本代码 - JP
 
 on:
   push:
@@ -21,16 +21,16 @@ jobs:
         python-version: [3.8]
 
     steps:
-      - name: Install Requeriments
+      - name: 安装运行库
         run: pip install -r https://raw.githubusercontent.com/DNNDHH/FGO-VerCode-extractor/JP/requirements.txt
 
-      - name: Gettings files from Repo
+      - name: 获得库权限
         uses: actions/checkout@v2
 
-      - name: Execute main script
+      - name: 解析APK
         run: python3 main.py
 
-      - name: Commit & push changes to branch NA
+      - name: 提交更改
         uses: actions-js/push@master
         with:
           force: true
